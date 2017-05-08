@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A200BC5A1EC0A79E00D82DDC /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200BC591EC0A79E00D82DDC /* EditProfileTableViewController.swift */; };
 		A219160C1EB0B73300B338C3 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219160B1EB0B73300B338C3 /* NewsTableViewController.swift */; };
 		A219160E1EB0BA2E00B338C3 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219160D1EB0BA2E00B338C3 /* ArticleTableViewCell.swift */; };
 		A21916101EB0BE4300B338C3 /* News2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219160F1EB0BE4300B338C3 /* News2TableViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A200BC591EC0A79E00D82DDC /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		A219160B1EB0B73300B338C3 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		A219160D1EB0BA2E00B338C3 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		A219160F1EB0BE4300B338C3 /* News2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News2TableViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				A2ECD1151E893F6400441D45 /* ContactViewController.swift */,
 				A2F0D4101EAE2C7D004DE159 /* StudentViewController.swift */,
 				A219160B1EB0B73300B338C3 /* NewsTableViewController.swift */,
+				A200BC591EC0A79E00D82DDC /* EditProfileTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				A219160E1EB0BA2E00B338C3 /* ArticleTableViewCell.swift in Sources */,
 				A2C7790D1E854510007E50EB /* ProfileViewController.swift in Sources */,
 				A2D099B61E8BD3440023C7E7 /* Article.swift in Sources */,
+				A200BC5A1EC0A79E00D82DDC /* EditProfileTableViewController.swift in Sources */,
 				A2CADC5E1E76B395009AA449 /* ViewController.swift in Sources */,
 				A219160C1EB0B73300B338C3 /* NewsTableViewController.swift in Sources */,
 				A21916101EB0BE4300B338C3 /* News2TableViewController.swift in Sources */,

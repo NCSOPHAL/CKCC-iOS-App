@@ -15,6 +15,17 @@ class ViewController: UIViewController {
     
     let username = "ckcc"
     let password = "123"
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let username = UserDefaults.standard.value(forKey: "username") as? String
+        if username != nil {
+            // Logged in
+            print("Already logged in")
+            performSegue(withIdentifier: "segue_main", sender: nil)
+        }
+    }
 
     @IBAction func loginButtonClick() {
         let inputUsername = usernameTextField.text!
@@ -22,6 +33,10 @@ class ViewController: UIViewController {
         
         if login(withUsername: inputUsername, andPassword: inputPassword) {
             performSegue(withIdentifier: "segue_main", sender: nil)
+            // Save username
+            UserDefaults.standard.set(inputUsername, forKey: "username")
+            UserDefaults.standard.synchronize()
+            print("Save username")
         } else {
             print("Invalid username or password")
         }

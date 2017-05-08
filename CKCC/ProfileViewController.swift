@@ -16,7 +16,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var placeOfBirthLabel: UILabel!
     
-    let name = "Mr. A"
     let gender = "Male"
     let phone = "012 987 654"
     let email = "rstvu@xyz.com"
@@ -25,16 +24,15 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = name
+        let username = UserDefaults.standard.value(forKey: "username") as! String
+        nameLabel.text = username
         genderLabel.text = gender
         phoneLabel.text = phone
         emailLabel.text = email
         placeOfBirthLabel.text = placeOfBirth
     }
     
-    @IBAction func onEditButtonClick(_ sender: UIBarButtonItem) {
-        print("On edit click")
-    }
+    
     
 
 }
