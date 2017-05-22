@@ -16,7 +16,7 @@
 		A21A04741ED30AC000407414 /* Article+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A04721ED30AC000407414 /* Article+CoreDataProperties.swift */; };
 		A2C7790D1E854510007E50EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C7790C1E854510007E50EB /* ProfileViewController.swift */; };
 		A2CADC5C1E76B395009AA449 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CADC5B1E76B395009AA449 /* AppDelegate.swift */; };
-		A2CADC5E1E76B395009AA449 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CADC5D1E76B395009AA449 /* ViewController.swift */; };
+		A2CADC5E1E76B395009AA449 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CADC5D1E76B395009AA449 /* LoginViewController.swift */; };
 		A2CADC611E76B395009AA449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CADC5F1E76B395009AA449 /* Main.storyboard */; };
 		A2CADC631E76B395009AA449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2CADC621E76B395009AA449 /* Assets.xcassets */; };
 		A2CADC661E76B395009AA449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CADC641E76B395009AA449 /* LaunchScreen.storyboard */; };
@@ -35,7 +35,7 @@
 		A2C7790C1E854510007E50EB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A2CADC581E76B395009AA449 /* CKCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CADC5B1E76B395009AA449 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2CADC5D1E76B395009AA449 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A2CADC5D1E76B395009AA449 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A2CADC601E76B395009AA449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2CADC621E76B395009AA449 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CADC651E76B395009AA449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,6 +107,7 @@
 		A2F0D40E1EAE2AE4004DE159 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A2CADC5D1E76B395009AA449 /* LoginViewController.swift */,
 				A2C7790C1E854510007E50EB /* ProfileViewController.swift */,
 				A2ECD1151E893F6400441D45 /* ContactViewController.swift */,
 				A2F0D4101EAE2C7D004DE159 /* StudentViewController.swift */,
@@ -120,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				A2CADC5B1E76B395009AA449 /* AppDelegate.swift */,
-				A2CADC5D1E76B395009AA449 /* ViewController.swift */,
 				A2CADC671E76B395009AA449 /* Info.plist */,
 			);
 			name = Other;
@@ -202,7 +202,7 @@
 				A219160E1EB0BA2E00B338C3 /* ArticleTableViewCell.swift in Sources */,
 				A2C7790D1E854510007E50EB /* ProfileViewController.swift in Sources */,
 				A200BC5A1EC0A79E00D82DDC /* EditProfileTableViewController.swift in Sources */,
-				A2CADC5E1E76B395009AA449 /* ViewController.swift in Sources */,
+				A2CADC5E1E76B395009AA449 /* LoginViewController.swift in Sources */,
 				A21A04701ED3093C00407414 /* CkccDataModel.xcdatamodeld in Sources */,
 				A219160C1EB0B73300B338C3 /* NewsTableViewController.swift in Sources */,
 				A21916101EB0BE4300B338C3 /* News2TableViewController.swift in Sources */,
