@@ -11,13 +11,15 @@
 		A219160C1EB0B73300B338C3 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219160B1EB0B73300B338C3 /* NewsTableViewController.swift */; };
 		A219160E1EB0BA2E00B338C3 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219160D1EB0BA2E00B338C3 /* ArticleTableViewCell.swift */; };
 		A21916101EB0BE4300B338C3 /* News2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219160F1EB0BE4300B338C3 /* News2TableViewController.swift */; };
+		A21A04701ED3093C00407414 /* CkccDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A21A046E1ED3093C00407414 /* CkccDataModel.xcdatamodeld */; };
+		A21A04731ED30AC000407414 /* Article+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A04711ED30AC000407414 /* Article+CoreDataClass.swift */; };
+		A21A04741ED30AC000407414 /* Article+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A04721ED30AC000407414 /* Article+CoreDataProperties.swift */; };
 		A2C7790D1E854510007E50EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C7790C1E854510007E50EB /* ProfileViewController.swift */; };
 		A2CADC5C1E76B395009AA449 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CADC5B1E76B395009AA449 /* AppDelegate.swift */; };
 		A2CADC5E1E76B395009AA449 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CADC5D1E76B395009AA449 /* ViewController.swift */; };
 		A2CADC611E76B395009AA449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CADC5F1E76B395009AA449 /* Main.storyboard */; };
 		A2CADC631E76B395009AA449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2CADC621E76B395009AA449 /* Assets.xcassets */; };
 		A2CADC661E76B395009AA449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CADC641E76B395009AA449 /* LaunchScreen.storyboard */; };
-		A2D099B61E8BD3440023C7E7 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D099B51E8BD3440023C7E7 /* Article.swift */; };
 		A2ECD1161E893F6400441D45 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ECD1151E893F6400441D45 /* ContactViewController.swift */; };
 		A2F0D4111EAE2C7D004DE159 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0D4101EAE2C7D004DE159 /* StudentViewController.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +29,9 @@
 		A219160B1EB0B73300B338C3 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		A219160D1EB0BA2E00B338C3 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		A219160F1EB0BE4300B338C3 /* News2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News2TableViewController.swift; sourceTree = "<group>"; };
+		A21A046F1ED3093C00407414 /* CkccDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CkccDataModel.xcdatamodel; sourceTree = "<group>"; };
+		A21A04711ED30AC000407414 /* Article+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A21A04721ED30AC000407414 /* Article+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A2C7790C1E854510007E50EB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A2CADC581E76B395009AA449 /* CKCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CADC5B1E76B395009AA449 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +40,6 @@
 		A2CADC621E76B395009AA449 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CADC651E76B395009AA449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2CADC671E76B395009AA449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2D099B51E8BD3440023C7E7 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		A2ECD1151E893F6400441D45 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		A2F0D4101EAE2C7D004DE159 /* StudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A21A046D1ED308FD00407414 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A21A04711ED30AC000407414 /* Article+CoreDataClass.swift */,
+				A21A04721ED30AC000407414 /* Article+CoreDataProperties.swift */,
+				A21A046E1ED3093C00407414 /* CkccDataModel.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		A2CADC4F1E76B395009AA449 = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +84,7 @@
 		A2CADC5A1E76B395009AA449 /* CKCC */ = {
 			isa = PBXGroup;
 			children = (
+				A21A046D1ED308FD00407414 /* Model */,
 				A2F0D40F1EAE2B1D004DE159 /* Other */,
 				A2F0D40E1EAE2AE4004DE159 /* Controller */,
 				A2F0D40D1EAE2AD0004DE159 /* UI */,
@@ -107,7 +122,6 @@
 				A2CADC5B1E76B395009AA449 /* AppDelegate.swift */,
 				A2CADC5D1E76B395009AA449 /* ViewController.swift */,
 				A2CADC671E76B395009AA449 /* Info.plist */,
-				A2D099B51E8BD3440023C7E7 /* Article.swift */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -187,11 +201,13 @@
 			files = (
 				A219160E1EB0BA2E00B338C3 /* ArticleTableViewCell.swift in Sources */,
 				A2C7790D1E854510007E50EB /* ProfileViewController.swift in Sources */,
-				A2D099B61E8BD3440023C7E7 /* Article.swift in Sources */,
 				A200BC5A1EC0A79E00D82DDC /* EditProfileTableViewController.swift in Sources */,
 				A2CADC5E1E76B395009AA449 /* ViewController.swift in Sources */,
+				A21A04701ED3093C00407414 /* CkccDataModel.xcdatamodeld in Sources */,
 				A219160C1EB0B73300B338C3 /* NewsTableViewController.swift in Sources */,
 				A21916101EB0BE4300B338C3 /* News2TableViewController.swift in Sources */,
+				A21A04731ED30AC000407414 /* Article+CoreDataClass.swift in Sources */,
+				A21A04741ED30AC000407414 /* Article+CoreDataProperties.swift in Sources */,
 				A2F0D4111EAE2C7D004DE159 /* StudentViewController.swift in Sources */,
 				A2CADC5C1E76B395009AA449 /* AppDelegate.swift in Sources */,
 				A2ECD1161E893F6400441D45 /* ContactViewController.swift in Sources */,
@@ -363,6 +379,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A21A046E1ED3093C00407414 /* CkccDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A21A046F1ED3093C00407414 /* CkccDataModel.xcdatamodel */,
+			);
+			currentVersion = A21A046F1ED3093C00407414 /* CkccDataModel.xcdatamodel */;
+			path = CkccDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A2CADC501E76B395009AA449 /* Project object */;
 }

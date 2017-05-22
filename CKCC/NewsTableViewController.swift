@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewsTableViewController: UITableViewController {
 
@@ -27,18 +28,25 @@ class NewsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell_article") as! ArticleTableViewCell
         let article = articles[indexPath.row]
         cell.titleLabel.text = article.title
-        cell.dateLabel.text = article.date
+        cell.dateLabel.text = article.date?.description
         return cell
     }
     
     func loadArticles() -> [Article] {
         
-        let a1 = Article(title: "CKCC Winter Exhibition", date: "25 April 2017", imageUrl: "")
-        let a2 = Article(title: "Korean Seminar", date: "23 April 2017", imageUrl: "")
-        let a3 = Article(title: "Karate Show", date: "20 April 2017", imageUrl: "")
-        let articles = [a1, a2, a3]
-        return articles
+        let request = NSFetchRequest<Article>(entityName: "Article")
+        let result = try! AppDelegate.context.fetch(request)
+        return result
         
+    }
+    
+    // Temporarily insert articles
+    func insertPreArticles(){
+        let article = NSEntityDescription.insertNewObject(forEntityName: "Article", into: AppDelegate.context) as! Article
+        article.title = "Korean Shows"
+        article.date = NSDate()
+        article.imageUrl = "http://rupp.edu.kh/ckcc/images/b.jpg"
+        try! AppDelegate.context.save()
     }
 
 }
