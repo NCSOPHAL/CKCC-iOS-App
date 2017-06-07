@@ -59,6 +59,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          error conditions that could cause the creation of the store to fail.
          */
         let container = NSPersistentContainer(name: "CkccDataModel")
+        
+        // Start modifying container to use pre-load data
+        var persistentStoreDescriptions: NSPersistentStoreDescription
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let applicationDocumentsDirectory = urls[urls.count-1]
+        let storeUrl = applicationDocumentsDirectory.appendingPathComponent("CkccDataModel.sqlite")
+        
+        if !FileManager.default.fileExists(atPath: (storeUrl.path)) {
+            let preloadDataUrl = Bundle.main.url(forResource: "CkccDataModel", withExtension: "sqlite")!
+            try! FileManager.default.copyItem(at: preloadDataUrl, to: storeUrl)
+        }
+        
+        let description = NSPersistentStoreDescription()
+        description.shouldInferMappingModelAutomatically = true
+        description.shouldMigrateStoreAutomatically = true
+        description.url = storeUrl
+        
+        container.persistentStoreDescriptions = [description]
+        // End modifying container
+        
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
