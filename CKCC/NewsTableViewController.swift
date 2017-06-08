@@ -18,6 +18,9 @@ class NewsTableViewController: UITableViewController {
 
         articles = loadArticles()
         tableView.reloadData()
+        
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        print(urls[urls.count-1] as URL)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -14,6 +14,11 @@
 		A21A04701ED3093C00407414 /* CkccDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A21A046E1ED3093C00407414 /* CkccDataModel.xcdatamodeld */; };
 		A21A04731ED30AC000407414 /* Article+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A04711ED30AC000407414 /* Article+CoreDataClass.swift */; };
 		A21A04741ED30AC000407414 /* Article+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A04721ED30AC000407414 /* Article+CoreDataProperties.swift */; };
+		A248C93F1ED59E4100E2637F /* LoginHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248C93D1ED59E4100E2637F /* LoginHistory+CoreDataClass.swift */; };
+		A248C9401ED59E4100E2637F /* LoginHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248C93E1ED59E4100E2637F /* LoginHistory+CoreDataProperties.swift */; };
+		A248C9421ED5A08C00E2637F /* LoginHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248C9411ED5A08C00E2637F /* LoginHistoryTableViewController.swift */; };
+		A248C9451ED5A98100E2637F /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248C9431ED5A98100E2637F /* User+CoreDataClass.swift */; };
+		A248C9461ED5A98100E2637F /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248C9441ED5A98100E2637F /* User+CoreDataProperties.swift */; };
 		A2C7790D1E854510007E50EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C7790C1E854510007E50EB /* ProfileViewController.swift */; };
 		A2CADC5C1E76B395009AA449 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CADC5B1E76B395009AA449 /* AppDelegate.swift */; };
 		A2CADC5E1E76B395009AA449 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CADC5D1E76B395009AA449 /* LoginViewController.swift */; };
@@ -22,6 +27,7 @@
 		A2CADC661E76B395009AA449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CADC641E76B395009AA449 /* LaunchScreen.storyboard */; };
 		A2ECD1161E893F6400441D45 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ECD1151E893F6400441D45 /* ContactViewController.swift */; };
 		A2F0D4111EAE2C7D004DE159 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0D4101EAE2C7D004DE159 /* StudentViewController.swift */; };
+		A2FACADD1EE8178500375B9A /* CkccDataModel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A2FACADC1EE8178500375B9A /* CkccDataModel.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,11 @@
 		A21A046F1ED3093C00407414 /* CkccDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CkccDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A21A04711ED30AC000407414 /* Article+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A21A04721ED30AC000407414 /* Article+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A248C93D1ED59E4100E2637F /* LoginHistory+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A248C93E1ED59E4100E2637F /* LoginHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A248C9411ED5A08C00E2637F /* LoginHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHistoryTableViewController.swift; sourceTree = "<group>"; };
+		A248C9431ED5A98100E2637F /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A248C9441ED5A98100E2637F /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A2C7790C1E854510007E50EB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A2CADC581E76B395009AA449 /* CKCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CKCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CADC5B1E76B395009AA449 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +53,7 @@
 		A2CADC671E76B395009AA449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2ECD1151E893F6400441D45 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		A2F0D4101EAE2C7D004DE159 /* StudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
+		A2FACADC1EE8178500375B9A /* CkccDataModel.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CkccDataModel.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,11 @@
 		A21A046D1ED308FD00407414 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A2FACADC1EE8178500375B9A /* CkccDataModel.sqlite */,
+				A248C9431ED5A98100E2637F /* User+CoreDataClass.swift */,
+				A248C9441ED5A98100E2637F /* User+CoreDataProperties.swift */,
+				A248C93D1ED59E4100E2637F /* LoginHistory+CoreDataClass.swift */,
+				A248C93E1ED59E4100E2637F /* LoginHistory+CoreDataProperties.swift */,
 				A21A04711ED30AC000407414 /* Article+CoreDataClass.swift */,
 				A21A04721ED30AC000407414 /* Article+CoreDataProperties.swift */,
 				A21A046E1ED3093C00407414 /* CkccDataModel.xcdatamodeld */,
@@ -113,6 +130,7 @@
 				A2F0D4101EAE2C7D004DE159 /* StudentViewController.swift */,
 				A219160B1EB0B73300B338C3 /* NewsTableViewController.swift */,
 				A200BC591EC0A79E00D82DDC /* EditProfileTableViewController.swift */,
+				A248C9411ED5A08C00E2637F /* LoginHistoryTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -189,6 +207,7 @@
 				A2CADC661E76B395009AA449 /* LaunchScreen.storyboard in Resources */,
 				A2CADC631E76B395009AA449 /* Assets.xcassets in Resources */,
 				A2CADC611E76B395009AA449 /* Main.storyboard in Resources */,
+				A2FACADD1EE8178500375B9A /* CkccDataModel.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,15 +218,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A248C93F1ED59E4100E2637F /* LoginHistory+CoreDataClass.swift in Sources */,
 				A219160E1EB0BA2E00B338C3 /* ArticleTableViewCell.swift in Sources */,
 				A2C7790D1E854510007E50EB /* ProfileViewController.swift in Sources */,
 				A200BC5A1EC0A79E00D82DDC /* EditProfileTableViewController.swift in Sources */,
+				A248C9401ED59E4100E2637F /* LoginHistory+CoreDataProperties.swift in Sources */,
 				A2CADC5E1E76B395009AA449 /* LoginViewController.swift in Sources */,
+				A248C9451ED5A98100E2637F /* User+CoreDataClass.swift in Sources */,
 				A21A04701ED3093C00407414 /* CkccDataModel.xcdatamodeld in Sources */,
 				A219160C1EB0B73300B338C3 /* NewsTableViewController.swift in Sources */,
 				A21916101EB0BE4300B338C3 /* News2TableViewController.swift in Sources */,
+				A248C9421ED5A08C00E2637F /* LoginHistoryTableViewController.swift in Sources */,
 				A21A04731ED30AC000407414 /* Article+CoreDataClass.swift in Sources */,
 				A21A04741ED30AC000407414 /* Article+CoreDataProperties.swift in Sources */,
+				A248C9461ED5A98100E2637F /* User+CoreDataProperties.swift in Sources */,
 				A2F0D4111EAE2C7D004DE159 /* StudentViewController.swift in Sources */,
 				A2CADC5C1E76B395009AA449 /* AppDelegate.swift in Sources */,
 				A2ECD1161E893F6400441D45 /* ContactViewController.swift in Sources */,

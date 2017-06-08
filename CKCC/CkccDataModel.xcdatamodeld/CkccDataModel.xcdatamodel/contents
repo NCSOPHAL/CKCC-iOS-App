@@ -5,7 +5,17 @@
         <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="LoginHistory" representedClassName="LoginHistory" syncable="YES">
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Article" positionX="-2675" positionY="-4293" width="128" height="88"/>
+        <element name="LoginHistory" positionX="-2889" positionY="-4285" width="128" height="73"/>
+        <element name="User" positionX="-2772" positionY="-4266" width="128" height="75"/>
     </elements>
 </model>
