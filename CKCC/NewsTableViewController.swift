@@ -16,11 +16,7 @@ class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        articles = loadArticles()
-        tableView.reloadData()
-        
-        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        print(urls[urls.count-1] as URL)
+        loadArticlesFromServer()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,12 +31,38 @@ class NewsTableViewController: UITableViewController {
         return cell
     }
     
-    func loadArticles() -> [Article] {
+    func loadArticlesFromDb() -> [Article] {
         
         let request = NSFetchRequest<Article>(entityName: "Article")
         let result = try! AppDelegate.context.fetch(request)
         return result
         
+    }
+    
+    func loadArticlesFromServer() {
+        let serverAddress = "http://localhost/test/ckcc-api/news.php"
+        let url = URL(string: serverAddress)!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            let str = String(data: data!, encoding: .utf8)!
+            print(str)
+            let array = try! JSONSerialization.jsonObject(with: data!, options: []) as! [Any]
+            var articles = [Article]()
+            for item in array {
+                let articleItem = item as! [String:Any]
+                let id = articleItem["id"] as! Int
+                let title = articleItem["title"] as! String
+                let content = articleItem["content"] as! String
+                let thumbnail = articleItem["thumbnail_url"] as! String
+                
+                //let article = Article(id: id, title: title, content: content, date: Date(), thumbnailUrl: thumbnail)
+                let article = Article()
+                
+                articles.append(article)
+            }
+            self.articles = articles
+            self.tableView.reloadData()
+        }
+        task.resume()
     }
     
     // Temporarily insert articles
