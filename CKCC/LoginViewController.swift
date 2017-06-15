@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
         if username != nil {
             // Logged in
             print("Already logged in")
-            //performSegue(withIdentifier: "segue_main", sender: nil)
+            performSegue(withIdentifier: "segue_main", sender: nil)
         }
         
         let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
