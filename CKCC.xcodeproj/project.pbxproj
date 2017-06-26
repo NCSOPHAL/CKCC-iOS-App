@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58073AD7221315A2E951CD4A /* Pods_CKCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72200B95EC169C1A5531DB76 /* Pods_CKCC.framework */; };
 		A200BC5A1EC0A79E00D82DDC /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200BC591EC0A79E00D82DDC /* EditProfileTableViewController.swift */; };
 		A219160C1EB0B73300B338C3 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219160B1EB0B73300B338C3 /* NewsTableViewController.swift */; };
 		A219160E1EB0BA2E00B338C3 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219160D1EB0BA2E00B338C3 /* ArticleTableViewCell.swift */; };
@@ -26,11 +27,16 @@
 		A2CADC661E76B395009AA449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CADC641E76B395009AA449 /* LaunchScreen.storyboard */; };
 		A2E6D7481EF15BF600241E49 /* MyArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E6D7471EF15BF600241E49 /* MyArticle.swift */; };
 		A2ECD1161E893F6400441D45 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ECD1151E893F6400441D45 /* ContactViewController.swift */; };
+		A2EF92871EF7E8F700E03A27 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF92861EF7E8F700E03A27 /* ArticleViewController.swift */; };
+		A2EF92891EF803EE00E03A27 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF92881EF803EE00E03A27 /* MapViewController.swift */; };
 		A2F0D4111EAE2C7D004DE159 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0D4101EAE2C7D004DE159 /* StudentViewController.swift */; };
 		A2FACADD1EE8178500375B9A /* CkccDataModel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A2FACADC1EE8178500375B9A /* CkccDataModel.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06C888207137FB0296176DDF /* Pods-CKCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKCC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CKCC/Pods-CKCC.debug.xcconfig"; sourceTree = "<group>"; };
+		37EBF230A42AA6626C0940EA /* Pods-CKCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-CKCC/Pods-CKCC.release.xcconfig"; sourceTree = "<group>"; };
+		72200B95EC169C1A5531DB76 /* Pods_CKCC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKCC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A200BC591EC0A79E00D82DDC /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		A219160B1EB0B73300B338C3 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		A219160D1EB0BA2E00B338C3 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
@@ -52,6 +58,8 @@
 		A2CADC671E76B395009AA449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2E6D7471EF15BF600241E49 /* MyArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyArticle.swift; sourceTree = "<group>"; };
 		A2ECD1151E893F6400441D45 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		A2EF92861EF7E8F700E03A27 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		A2EF92881EF803EE00E03A27 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A2F0D4101EAE2C7D004DE159 /* StudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 		A2FACADC1EE8178500375B9A /* CkccDataModel.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CkccDataModel.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,12 +69,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58073AD7221315A2E951CD4A /* Pods_CKCC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17B48BC9B3A239C27546AE90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06C888207137FB0296176DDF /* Pods-CKCC.debug.xcconfig */,
+				37EBF230A42AA6626C0940EA /* Pods-CKCC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A21A046D1ED308FD00407414 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +105,8 @@
 			children = (
 				A2CADC5A1E76B395009AA449 /* CKCC */,
 				A2CADC591E76B395009AA449 /* Products */,
+				17B48BC9B3A239C27546AE90 /* Pods */,
+				B499CD00A177B696405B44BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +159,8 @@
 				A219160B1EB0B73300B338C3 /* NewsTableViewController.swift */,
 				A200BC591EC0A79E00D82DDC /* EditProfileTableViewController.swift */,
 				A248C9411ED5A08C00E2637F /* LoginHistoryTableViewController.swift */,
+				A2EF92861EF7E8F700E03A27 /* ArticleViewController.swift */,
+				A2EF92881EF803EE00E03A27 /* MapViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -152,6 +174,14 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
+		B499CD00A177B696405B44BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72200B95EC169C1A5531DB76 /* Pods_CKCC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2CADC6A1E76B395009AA449 /* Build configuration list for PBXNativeTarget "CKCC" */;
 			buildPhases = (
+				E7E9903B8F5EC3A6AF0803FF /* [CP] Check Pods Manifest.lock */,
 				A2CADC541E76B395009AA449 /* Sources */,
 				A2CADC551E76B395009AA449 /* Frameworks */,
 				A2CADC561E76B395009AA449 /* Resources */,
+				6CFFE14013E3A1DE0D86374D /* [CP] Embed Pods Frameworks */,
+				A0A151B1DEE113E2BEC32253 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,6 +254,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6CFFE14013E3A1DE0D86374D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CKCC/Pods-CKCC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0A151B1DEE113E2BEC32253 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CKCC/Pods-CKCC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7E9903B8F5EC3A6AF0803FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A2CADC541E76B395009AA449 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -233,12 +314,14 @@
 				A248C9401ED59E4100E2637F /* LoginHistory+CoreDataProperties.swift in Sources */,
 				A2CADC5E1E76B395009AA449 /* LoginViewController.swift in Sources */,
 				A248C9451ED5A98100E2637F /* User+CoreDataClass.swift in Sources */,
+				A2EF92891EF803EE00E03A27 /* MapViewController.swift in Sources */,
 				A21A04701ED3093C00407414 /* CkccDataModel.xcdatamodeld in Sources */,
 				A219160C1EB0B73300B338C3 /* NewsTableViewController.swift in Sources */,
 				A248C9421ED5A08C00E2637F /* LoginHistoryTableViewController.swift in Sources */,
 				A21A04731ED30AC000407414 /* Article+CoreDataClass.swift in Sources */,
 				A21A04741ED30AC000407414 /* Article+CoreDataProperties.swift in Sources */,
 				A248C9461ED5A98100E2637F /* User+CoreDataProperties.swift in Sources */,
+				A2EF92871EF7E8F700E03A27 /* ArticleViewController.swift in Sources */,
 				A2E6D7481EF15BF600241E49 /* MyArticle.swift in Sources */,
 				A2F0D4111EAE2C7D004DE159 /* StudentViewController.swift in Sources */,
 				A2CADC5C1E76B395009AA449 /* AppDelegate.swift in Sources */,
@@ -365,6 +448,7 @@
 		};
 		A2CADC6B1E76B395009AA449 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06C888207137FB0296176DDF /* Pods-CKCC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DXX95Y7K36;
@@ -378,6 +462,7 @@
 		};
 		A2CADC6C1E76B395009AA449 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37EBF230A42AA6626C0940EA /* Pods-CKCC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DXX95Y7K36;

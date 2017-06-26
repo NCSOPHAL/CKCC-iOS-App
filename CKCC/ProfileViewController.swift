@@ -33,13 +33,15 @@ class ProfileViewController: UIViewController {
             let pob = profile["pob"] as! String
             let imageUrl = profile["profile_image"] as! String
             
-            self.nameLabel.text = name
-            self.genderLabel.text = gender
-            self.phoneLabel.text = phone
-            self.emailLabel.text = email
-            self.placeOfBirthLabel.text = pob
+            DispatchQueue.main.async {
+                self.nameLabel.text = name
+                self.genderLabel.text = gender
+                self.phoneLabel.text = phone
+                self.emailLabel.text = email
+                self.placeOfBirthLabel.text = pob
+                self.profileLoadingIndicator.isHidden = true
+            }
             
-            self.profileLoadingIndicator.isHidden = true
             self.showImageFromServer(imageUrl: imageUrl)
         }
         requestTask.resume()
@@ -49,7 +51,9 @@ class ProfileViewController: UIViewController {
         let url = URL(string: imageUrl)!
         let imageTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
             let image = UIImage(data: data!)
-            self.profileImageView.image = image
+            DispatchQueue.main.async {
+                self.profileImageView.image = image
+            }
         }
         imageTask.resume()
     }

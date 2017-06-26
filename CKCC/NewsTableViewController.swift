@@ -17,8 +17,8 @@ class NewsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // Request articles from server
-        let url = URL(string: "http://test.js-cambodia.com/ckcc/news.json")!
-        //let url = URL(string: "http://localhost/test/ckcc-api/news.php")!
+        //let url = URL(string: "http://test.js-cambodia.com/ckcc/news.json")!
+        let url = URL(string: "http://localhost/test/ckcc-api/news.json")!
         let articlesRequest = URLSession.shared.dataTask(with: url) { (data, response, error) in
             let items = try! JSONSerialization.jsonObject(with: data!, options: []) as! [Any]
             for item in items {
@@ -32,7 +32,9 @@ class NewsTableViewController: UITableViewController {
                 let articleObject = MyArticle(id: id, title: title, content: content, date: date, thumbnailUrl: thumbnailUrl)
                 self.articles.append(articleObject)
             }
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
         articlesRequest.resume()
     }
@@ -50,11 +52,29 @@ class NewsTableViewController: UITableViewController {
         let url = URL(string: article.thumbnailUrl)!
         let imageRequest = URLSession.shared.dataTask(with: url) { (data, response, error) in
             let image = UIImage(data: data!)
-            cell.thumbnailImageView.image = image
+            DispatchQueue.main.async {
+                cell.thumbnailImageView.image = image
+            }
         }
         imageRequest.resume()
         
         return cell
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get selected article
+        let selectedCell = sender as! ArticleTableViewCell
+        let indexPath = tableView.indexPath(for: selectedCell)!
+        let selectedArticle = articles[indexPath.row]
+        
+        let articleViewController = segue.destination as! ArticleViewController
+        articleViewController.article = selectedArticle
+    }
+    
 }
+
+
+
+
+
+
