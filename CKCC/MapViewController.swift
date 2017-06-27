@@ -13,6 +13,8 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
 
     @IBOutlet weak var mapView: GMSMapView!
     
+    var locationManager : CLLocationManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +35,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         marker.map = mapView
         
         // Get current location
-        let locationManager = CLLocationManager()
+        locationManager = CLLocationManager()
         locationManager.requestAlwaysAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = 50
@@ -57,6 +59,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate, CLLocationManager
         marker.position = location.coordinate
         marker.title = "I'm here"
         marker.map = mapView
+        locationManager.stopUpdatingLocation()
     }
     
 
