@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 class ProfileViewController: UIViewController {
 
@@ -22,6 +23,8 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
+        // Load profile from server
         profileLoadingIndicator.isHidden = false
         let url = URL(string: "http://test.js-cambodia.com/ckcc/profile.json")!
         let requestTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -45,6 +48,15 @@ class ProfileViewController: UIViewController {
             self.showImageFromServer(imageUrl: imageUrl)
         }
         requestTask.resume()
+        */
+        
+        // Load profile from Facebook
+        if let profile = FBSDKProfile.current() {
+            nameLabel.text = profile.name
+        } else {
+            print("Profile is nil")
+        }
+        
     }
     
     func showImageFromServer(imageUrl: String) {

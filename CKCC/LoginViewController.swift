@@ -8,50 +8,51 @@
 
 import UIKit
 import CoreData
+import FBSDKLoginKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var fbLoginButton: FBSDKLoginButton!
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        /*
         let username = UserDefaults.standard.value(forKey: "username") as? String
         if username != nil {
             // Logged in
             print("Already logged in")
             performSegue(withIdentifier: "segue_main", sender: nil)
+        }*/
+        
+        FBSDKProfile.enableUpdates(onAccessTokenChange: true)
+        
+        if FBSDKAccessToken.current() == nil {
+            // Set fb login permissions and delegate to login button
+            fbLoginButton.readPermissions = ["email", "user_birthday"]
+            fbLoginButton.delegate = self
+        }else{
+            print("User is already logged in")
+            performSegue(withIdentifier: "segue_main", sender: nil)
         }
         
-        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        print(urls[urls.count-1] as URL)
-        
-        
-        //Temporary insert users
-        /*
-        let user1 = NSEntityDescription.insertNewObject(forEntityName: "User", into: AppDelegate.context) as! User
-        user1.username = "ckcc"
-        user1.password = "123"
-        
-        let user2 = NSEntityDescription.insertNewObject(forEntityName: "User", into: AppDelegate.context) as! User
-        user2.username = "rupp"
-        user2.password = "789"
-        
-        let user3 = NSEntityDescription.insertNewObject(forEntityName: "User", into: AppDelegate.context) as! User
-        user3.username = "abc"
-        user3.password = "321"
-        
-        let user4 = NSEntityDescription.insertNewObject(forEntityName: "User", into: AppDelegate.context) as! User
-        user4.username = "xyz"
-        user4.password = "456"
-        
-        try! AppDelegate.context.save()
+    }
     
-        print("Insert 4 users")
-        */
-        
-        
+    // Login button delegate functions
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        print("Login completed")
+        if FBSDKAccessToken.current() != nil {
+            let profile = FBSDKProfile.current()
+            print("Name: ", profile?.name)
+            performSegue(withIdentifier: "segue_main", sender: nil)
+        }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("Logout")
     }
 
     @IBAction func loginButtonClick() {
