@@ -54,24 +54,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or login with:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoq-VS-CXm">
+                                <rect key="frame" x="136.5" y="474.5" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Re-uE-4rn" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="20" y="535.5" width="335" height="52"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="52" id="0n5-Yi-0En"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NFo-7a-WmU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="0f9-ZG-eVX"/>
                             <constraint firstItem="NFo-7a-WmU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2H1-TN-cZA"/>
+                            <constraint firstItem="qoq-VS-CXm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="48I-xz-gij"/>
                             <constraint firstItem="fMg-pN-Ete" firstAttribute="top" secondItem="NFo-7a-WmU" secondAttribute="bottom" constant="8" symbolic="YES" id="Aww-C2-8fp"/>
                             <constraint firstItem="Trx-ce-4PM" firstAttribute="top" secondItem="SnZ-Nw-yAl" secondAttribute="bottom" constant="20" id="DE8-4x-XTT"/>
                             <constraint firstItem="fMg-pN-Ete" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GvN-tA-Ma1"/>
                             <constraint firstItem="Trx-ce-4PM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LVN-oC-N63"/>
                             <constraint firstItem="SnZ-Nw-yAl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qry-j7-csU"/>
                             <constraint firstItem="Trx-ce-4PM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="RXd-vL-PEW"/>
+                            <constraint firstAttribute="trailing" secondItem="2Re-uE-4rn" secondAttribute="trailing" constant="20" symbolic="YES" id="V6e-1W-Pou"/>
+                            <constraint firstItem="qoq-VS-CXm" firstAttribute="top" secondItem="fMg-pN-Ete" secondAttribute="bottom" constant="40" id="cPm-VG-4e9"/>
                             <constraint firstItem="Lsl-I2-VG5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iHP-hd-Hcd"/>
+                            <constraint firstItem="2Re-uE-4rn" firstAttribute="top" secondItem="qoq-VS-CXm" secondAttribute="bottom" constant="40" id="jTr-wc-FQV"/>
                             <constraint firstItem="SnZ-Nw-yAl" firstAttribute="top" secondItem="Lsl-I2-VG5" secondAttribute="bottom" constant="8" symbolic="YES" id="ozw-Cx-Eda"/>
                             <constraint firstItem="Trx-ce-4PM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pkT-26-Vzg"/>
                             <constraint firstItem="NFo-7a-WmU" firstAttribute="top" secondItem="Trx-ce-4PM" secondAttribute="bottom" constant="18" id="uRF-9R-vr8"/>
+                            <constraint firstItem="2Re-uE-4rn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="yQT-A6-1v1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fbLoginButton" destination="2Re-uE-4rn" id="WWu-6o-PF2"/>
                         <outlet property="passwordTextField" destination="NFo-7a-WmU" id="eJg-9k-AcB"/>
                         <outlet property="usernameTextField" destination="Trx-ce-4PM" id="Ybu-Ov-Ulz"/>
                         <segue destination="xga-dL-eME" kind="show" identifier="segue_main" id="DuH-Gh-X42"/>
@@ -79,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-596" y="2"/>
+            <point key="canvasLocation" x="-596" y="1.3493253373313345"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4NK-KG-hCE">
@@ -120,8 +139,8 @@
                                     <constraint firstAttribute="width" constant="62" id="eu1-lP-w6q"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rk-FK-NlL">
-                                <rect key="frame" x="186" y="142" width="4.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rk-FK-NlL">
+                                <rect key="frame" x="163.5" y="142" width="49.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -224,7 +243,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wgu-OH-3lr">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wgu-OH-3lr">
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
@@ -957,7 +976,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kWd-Bn-cLa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" image="ic_news" id="prC-9F-Dqp"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GeW-eZ-wQ8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="GeW-eZ-wQ8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -976,7 +995,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JPr-cs-hAw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="About" image="ic_profile" id="VRM-Vv-kA3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4NN-xA-pOr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4NN-xA-pOr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -995,7 +1014,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D7X-La-fY7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="ic_profile" id="rm5-lS-9P4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oA0-Y0-ehR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oA0-Y0-ehR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1014,7 +1033,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8di-mC-aDp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Contact" image="ic_profile" id="gGg-gv-TkB"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u1q-5m-D5k">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="u1q-5m-D5k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
