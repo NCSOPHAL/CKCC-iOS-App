@@ -7,5 +7,7 @@ target 'CKCC' do
 
   # Pods for CKCC
   pod 'GoogleMaps'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
 
 end
