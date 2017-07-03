@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+
 import FBSDKLoginKit
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
@@ -32,13 +33,18 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if FBSDKAccessToken.current() == nil {
             // Set fb login permissions and delegate to login button
-            fbLoginButton.readPermissions = ["email", "user_birthday"]
+            fbLoginButton.readPermissions = ["email", "user_birthday", "user_friends", "user_hometown"]
             fbLoginButton.delegate = self
+            FBSDKProfile.enableUpdates(onAccessTokenChange: true)
         }else{
             print("User is already logged in")
             performSegue(withIdentifier: "segue_main", sender: nil)
         }
         
+    }
+    
+    func onFacebookProfileChanged() {
+        print("onFacebookProfileChanged")
     }
     
     // Login button delegate functions

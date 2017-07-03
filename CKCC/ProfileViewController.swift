@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import FBSDKLoginKit
 
 class ProfileViewController: UIViewController {
 
@@ -51,11 +52,30 @@ class ProfileViewController: UIViewController {
         */
         
         // Load profile from Facebook
-        if let profile = FBSDKProfile.current() {
-            nameLabel.text = profile.name
-        } else {
-            print("Profile is nil")
+        let request = FBSDKGraphRequest.init(graphPath: "/me", parameters: ["fields":"id,name,email,birthday,gender,hometown"], httpMethod: "GET")!
+        request.start(completionHandler: { (connection, result, error) in
+            print(result!)
+            let data = result as! [String:Any]
+            let name = data["name"] as! String
+            let gender = data["gender"] as! String
+            let email = data["email"] as! String
+            DispatchQueue.main.async {
+                self.nameLabel.text = name
+                self.genderLabel.text = gender
+                self.emailLabel.text = email
+            }
+        })
+        
+        // Load profile image
+        let profileImageSize = CGSize(width: 200, height: 200)
+        let profileImageUrl = FBSDKProfile.current().imageURL(for: .square, size: profileImageSize)!
+        let imageRequest = URLSession.shared.dataTask(with: profileImageUrl) { (data, response, error) in
+            let image = UIImage(data: data!)
+            DispatchQueue.main.async {
+                self.profileImageView.image = image
+            }
         }
+        imageRequest.resume()
         
     }
     

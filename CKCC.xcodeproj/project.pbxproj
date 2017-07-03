@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		58073AD7221315A2E951CD4A /* Pods_CKCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72200B95EC169C1A5531DB76 /* Pods_CKCC.framework */; };
 		A200BC5A1EC0A79E00D82DDC /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200BC591EC0A79E00D82DDC /* EditProfileTableViewController.swift */; };
+		A214C0101F0A69C4004A7379 /* ArticleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A214C00F1F0A69C4004A7379 /* ArticleViewCell.xib */; };
 		A219160C1EB0B73300B338C3 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219160B1EB0B73300B338C3 /* NewsTableViewController.swift */; };
 		A219160E1EB0BA2E00B338C3 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219160D1EB0BA2E00B338C3 /* ArticleTableViewCell.swift */; };
 		A21A04701ED3093C00407414 /* CkccDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A21A046E1ED3093C00407414 /* CkccDataModel.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 		A2CADC611E76B395009AA449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CADC5F1E76B395009AA449 /* Main.storyboard */; };
 		A2CADC631E76B395009AA449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2CADC621E76B395009AA449 /* Assets.xcassets */; };
 		A2CADC661E76B395009AA449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CADC641E76B395009AA449 /* LaunchScreen.storyboard */; };
+		A2DD42E31F03DA890021DABF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DD42E21F03DA890021DABF /* AboutViewController.swift */; };
 		A2E6D7481EF15BF600241E49 /* MyArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E6D7471EF15BF600241E49 /* MyArticle.swift */; };
 		A2ECD1161E893F6400441D45 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ECD1151E893F6400441D45 /* ContactViewController.swift */; };
 		A2EF92871EF7E8F700E03A27 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF92861EF7E8F700E03A27 /* ArticleViewController.swift */; };
@@ -38,6 +40,7 @@
 		37EBF230A42AA6626C0940EA /* Pods-CKCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CKCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-CKCC/Pods-CKCC.release.xcconfig"; sourceTree = "<group>"; };
 		72200B95EC169C1A5531DB76 /* Pods_CKCC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CKCC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A200BC591EC0A79E00D82DDC /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		A214C00F1F0A69C4004A7379 /* ArticleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleViewCell.xib; sourceTree = "<group>"; };
 		A219160B1EB0B73300B338C3 /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		A219160D1EB0BA2E00B338C3 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		A21A046F1ED3093C00407414 /* CkccDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CkccDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		A2CADC621E76B395009AA449 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CADC651E76B395009AA449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2CADC671E76B395009AA449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2DD42E21F03DA890021DABF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A2E6D7471EF15BF600241E49 /* MyArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyArticle.swift; sourceTree = "<group>"; };
 		A2ECD1151E893F6400441D45 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		A2EF92861EF7E8F700E03A27 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				A2CADC621E76B395009AA449 /* Assets.xcassets */,
 				A2CADC641E76B395009AA449 /* LaunchScreen.storyboard */,
 				A219160D1EB0BA2E00B338C3 /* ArticleTableViewCell.swift */,
+				A214C00F1F0A69C4004A7379 /* ArticleViewCell.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				A248C9411ED5A08C00E2637F /* LoginHistoryTableViewController.swift */,
 				A2EF92861EF7E8F700E03A27 /* ArticleViewController.swift */,
 				A2EF92881EF803EE00E03A27 /* MapViewController.swift */,
+				A2DD42E21F03DA890021DABF /* AboutViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -248,6 +254,7 @@
 				A2CADC661E76B395009AA449 /* LaunchScreen.storyboard in Resources */,
 				A2CADC631E76B395009AA449 /* Assets.xcassets in Resources */,
 				A2CADC611E76B395009AA449 /* Main.storyboard in Resources */,
+				A214C0101F0A69C4004A7379 /* ArticleViewCell.xib in Resources */,
 				A2FACADD1EE8178500375B9A /* CkccDataModel.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +332,7 @@
 				A2E6D7481EF15BF600241E49 /* MyArticle.swift in Sources */,
 				A2F0D4111EAE2C7D004DE159 /* StudentViewController.swift in Sources */,
 				A2CADC5C1E76B395009AA449 /* AppDelegate.swift in Sources */,
+				A2DD42E31F03DA890021DABF /* AboutViewController.swift in Sources */,
 				A2ECD1161E893F6400441D45 /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

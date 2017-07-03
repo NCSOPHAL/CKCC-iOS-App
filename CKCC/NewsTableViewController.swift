@@ -16,6 +16,10 @@ class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Register ArticleViewCell.xib to TableView
+        let nib = UINib(nibName: "ArticleViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "article_view_cell")
+        
         // Request articles from server
         //let url = URL(string: "http://test.js-cambodia.com/ckcc/news.json")!
         let url = URL(string: "http://localhost/test/ckcc-api/news.json")!
@@ -44,10 +48,9 @@ class NewsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell_article") as! ArticleTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "article_view_cell") as! ArticleTableViewCell
         let article = articles[indexPath.row]
         cell.titleLabel.text = article.title
-        cell.dateLabel.text = ""
         
         let url = URL(string: article.thumbnailUrl)!
         let imageRequest = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -59,6 +62,10 @@ class NewsTableViewController: UITableViewController {
         imageRequest.resume()
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
