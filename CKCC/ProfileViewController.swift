@@ -24,6 +24,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        makeProfileImageViewCircle()
         /*
         // Load profile from server
         profileLoadingIndicator.isHidden = false
@@ -90,5 +91,9 @@ class ProfileViewController: UIViewController {
         imageTask.resume()
     }
     
+    func makeProfileImageViewCircle() {
+        profileImageView.layer.cornerRadius = 31
+        profileImageView.layer.masksToBounds = true
+    }
 
 }

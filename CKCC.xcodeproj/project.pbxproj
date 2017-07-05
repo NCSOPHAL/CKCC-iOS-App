@@ -15,6 +15,7 @@
 		A21A04701ED3093C00407414 /* CkccDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A21A046E1ED3093C00407414 /* CkccDataModel.xcdatamodeld */; };
 		A21A04731ED30AC000407414 /* Article+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A04711ED30AC000407414 /* Article+CoreDataClass.swift */; };
 		A21A04741ED30AC000407414 /* Article+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21A04721ED30AC000407414 /* Article+CoreDataProperties.swift */; };
+		A21FF5CD1F0D0363001863B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A21FF5CC1F0D0363001863B4 /* GoogleService-Info.plist */; };
 		A248C93F1ED59E4100E2637F /* LoginHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248C93D1ED59E4100E2637F /* LoginHistory+CoreDataClass.swift */; };
 		A248C9401ED59E4100E2637F /* LoginHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248C93E1ED59E4100E2637F /* LoginHistory+CoreDataProperties.swift */; };
 		A248C9421ED5A08C00E2637F /* LoginHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A248C9411ED5A08C00E2637F /* LoginHistoryTableViewController.swift */; };
@@ -46,6 +47,7 @@
 		A21A046F1ED3093C00407414 /* CkccDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CkccDataModel.xcdatamodel; sourceTree = "<group>"; };
 		A21A04711ED30AC000407414 /* Article+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A21A04721ED30AC000407414 /* Article+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Article+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A21FF5CC1F0D0363001863B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A248C93D1ED59E4100E2637F /* LoginHistory+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A248C93E1ED59E4100E2637F /* LoginHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A248C9411ED5A08C00E2637F /* LoginHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHistoryTableViewController.swift; sourceTree = "<group>"; };
@@ -174,8 +176,9 @@
 		A2F0D40F1EAE2B1D004DE159 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				A2CADC5B1E76B395009AA449 /* AppDelegate.swift */,
+				A21FF5CC1F0D0363001863B4 /* GoogleService-Info.plist */,
 				A2CADC671E76B395009AA449 /* Info.plist */,
+				A2CADC5B1E76B395009AA449 /* AppDelegate.swift */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				A2CADC611E76B395009AA449 /* Main.storyboard in Resources */,
 				A214C0101F0A69C4004A7379 /* ArticleViewCell.xib in Resources */,
 				A2FACADD1EE8178500375B9A /* CkccDataModel.sqlite in Resources */,
+				A21FF5CD1F0D0363001863B4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -67,6 +67,11 @@ class NewsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell = tableView.cellForRow(at: indexPath)
+        performSegue(withIdentifier: "segue_article", sender: selectedCell)
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get selected article

@@ -731,6 +731,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
+                    <connections>
+                        <segue destination="IoU-Q8-RK5" kind="show" identifier="segue_article" id="NS1-AI-7B1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PP9-Sv-UW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -749,7 +752,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dpr-B8-i28">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgy-Ig-jb8" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="229"/>
@@ -799,6 +802,7 @@
                     </view>
                     <connections>
                         <outlet property="articleImageView" destination="KGv-1J-GMd" id="Xa1-Vi-EIO"/>
+                        <outlet property="articleImageViewHeightConstraint" destination="CfS-Uq-BQU" id="srs-xb-waa"/>
                         <outlet property="contentLabel" destination="e4d-Rk-rS9" id="9Qt-9d-g6g"/>
                     </connections>
                 </viewController>
@@ -994,9 +998,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kWd-Bn-cLa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" image="ic_news" id="prC-9F-Dqp"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="GeW-eZ-wQ8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="GeW-eZ-wQ8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1013,9 +1019,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JPr-cs-hAw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="About" image="ic_profile" id="VRM-Vv-kA3"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4NN-xA-pOr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="4NN-xA-pOr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1032,9 +1040,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D7X-La-fY7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="ic_profile" id="rm5-lS-9P4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="oA0-Y0-ehR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="oA0-Y0-ehR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1043,7 +1053,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7S-n8-PFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3209" y="-815"/>
+            <point key="canvasLocation" x="2842" y="-1066"/>
         </scene>
         <!--Contact-->
         <scene sceneID="bmk-4c-CiZ">
@@ -1051,9 +1061,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8di-mC-aDp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Contact" image="ic_profile" id="gGg-gv-TkB"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="u1q-5m-D5k">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="u1q-5m-D5k">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

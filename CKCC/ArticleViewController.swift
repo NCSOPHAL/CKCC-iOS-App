@@ -12,6 +12,7 @@ class ArticleViewController: UIViewController {
 
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var articleImageViewHeightConstraint: NSLayoutConstraint!
 
     var article: MyArticle!
     
@@ -24,12 +25,19 @@ class ArticleViewController: UIViewController {
         let imageRequest = URLSession.shared.dataTask(with: url) { (data, response, error) in
             let image = UIImage(data: data!)
             DispatchQueue.main.async {
-                self.articleImageView.image = image
+                self.displayAndResizeArticleImageView(image: image!)
             }
         }
         imageRequest.resume()
         
         contentLabel.text = article.content
+    }
+    
+    func displayAndResizeArticleImageView(image: UIImage) {
+        articleImageView.image = image
+        let ratio = image.size.width / image.size.height
+        let newArticleImageViewHeight = articleImageView.frame.size.width / ratio
+        articleImageViewHeightConstraint.constant = newArticleImageViewHeight
     }
 
 }

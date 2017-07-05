@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FirebaseAuth
 
 import FBSDKLoginKit
 
@@ -31,7 +32,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         FBSDKProfile.enableUpdates(onAccessTokenChange: true)
         
-        if FBSDKAccessToken.current() == nil {
+        if Auth.auth().currentUser == nil {
             // Set fb login permissions and delegate to login button
             fbLoginButton.readPermissions = ["email", "user_birthday", "user_friends", "user_hometown"]
             fbLoginButton.delegate = self
@@ -51,9 +52,16 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         print("Login completed")
         if FBSDKAccessToken.current() != nil {
-            let profile = FBSDKProfile.current()
-            print("Name: ", profile?.name)
-            performSegue(withIdentifier: "segue_main", sender: nil)
+            let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            Auth.auth().signIn(with: credential, completion: { (user, error) in
+                if error == nil {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "segue_main", sender: nil)
+                    }
+                }else{
+                    print("Firebase authentication error: ", error.debugDescription)
+                }
+            })
         }
     }
     
@@ -95,11 +103,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
-    func test() {
-        var message = "Hello world"
-        var title : String?
-        var newTitle = title!
-    }
 
 }
 

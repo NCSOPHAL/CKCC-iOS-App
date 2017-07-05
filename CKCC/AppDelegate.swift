@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import GoogleMaps
 import FBSDKCoreKit
+import FirebaseCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyAUM8y6tECy-7IKHwU63uEvspiLb-y22EU")
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        FirebaseApp.configure()
                 
         return true
     }

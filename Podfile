@@ -9,5 +9,7 @@ target 'CKCC' do
   pod 'GoogleMaps'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 
 end
