@@ -29,10 +29,12 @@
 		A2CADC661E76B395009AA449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CADC641E76B395009AA449 /* LaunchScreen.storyboard */; };
 		A2DD42E31F03DA890021DABF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DD42E21F03DA890021DABF /* AboutViewController.swift */; };
 		A2E6D7481EF15BF600241E49 /* MyArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E6D7471EF15BF600241E49 /* MyArticle.swift */; };
+		A2EB676F1F16412500C3E2CF /* ChangeProfileImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EB676E1F16412500C3E2CF /* ChangeProfileImageViewController.swift */; };
 		A2ECD1161E893F6400441D45 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ECD1151E893F6400441D45 /* ContactViewController.swift */; };
 		A2EF92871EF7E8F700E03A27 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF92861EF7E8F700E03A27 /* ArticleViewController.swift */; };
 		A2EF92891EF803EE00E03A27 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF92881EF803EE00E03A27 /* MapViewController.swift */; };
 		A2F0D4111EAE2C7D004DE159 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F0D4101EAE2C7D004DE159 /* StudentViewController.swift */; };
+		A2F2DBEA1F139F7000798789 /* NewsFromFirebaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2DBE91F139F7000798789 /* NewsFromFirebaseTableViewController.swift */; };
 		A2FACADD1EE8178500375B9A /* CkccDataModel.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = A2FACADC1EE8178500375B9A /* CkccDataModel.sqlite */; };
 /* End PBXBuildFile section */
 
@@ -63,10 +65,12 @@
 		A2CADC671E76B395009AA449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DD42E21F03DA890021DABF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		A2E6D7471EF15BF600241E49 /* MyArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyArticle.swift; sourceTree = "<group>"; };
+		A2EB676E1F16412500C3E2CF /* ChangeProfileImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProfileImageViewController.swift; sourceTree = "<group>"; };
 		A2ECD1151E893F6400441D45 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		A2EF92861EF7E8F700E03A27 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		A2EF92881EF803EE00E03A27 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A2F0D4101EAE2C7D004DE159 /* StudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
+		A2F2DBE91F139F7000798789 /* NewsFromFirebaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFromFirebaseTableViewController.swift; sourceTree = "<group>"; };
 		A2FACADC1EE8178500375B9A /* CkccDataModel.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CkccDataModel.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +173,8 @@
 				A2EF92861EF7E8F700E03A27 /* ArticleViewController.swift */,
 				A2EF92881EF803EE00E03A27 /* MapViewController.swift */,
 				A2DD42E21F03DA890021DABF /* AboutViewController.swift */,
+				A2F2DBE91F139F7000798789 /* NewsFromFirebaseTableViewController.swift */,
+				A2EB676E1F16412500C3E2CF /* ChangeProfileImageViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2EB676F1F16412500C3E2CF /* ChangeProfileImageViewController.swift in Sources */,
 				A248C93F1ED59E4100E2637F /* LoginHistory+CoreDataClass.swift in Sources */,
 				A219160E1EB0BA2E00B338C3 /* ArticleTableViewCell.swift in Sources */,
 				A2C7790D1E854510007E50EB /* ProfileViewController.swift in Sources */,
@@ -332,6 +339,7 @@
 				A21A04731ED30AC000407414 /* Article+CoreDataClass.swift in Sources */,
 				A21A04741ED30AC000407414 /* Article+CoreDataProperties.swift in Sources */,
 				A248C9461ED5A98100E2637F /* User+CoreDataProperties.swift in Sources */,
+				A2F2DBEA1F139F7000798789 /* NewsFromFirebaseTableViewController.swift in Sources */,
 				A2EF92871EF7E8F700E03A27 /* ArticleViewController.swift in Sources */,
 				A2E6D7481EF15BF600241E49 /* MyArticle.swift in Sources */,
 				A2F0D4111EAE2C7D004DE159 /* StudentViewController.swift in Sources */,

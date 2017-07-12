@@ -114,6 +114,7 @@
                         <segue destination="D7X-La-fY7" kind="relationship" relationship="viewControllers" id="7ei-Qp-Skr"/>
                         <segue destination="8di-mC-aDp" kind="relationship" relationship="viewControllers" id="fO4-Ag-7uH"/>
                         <segue destination="JPr-cs-hAw" kind="relationship" relationship="viewControllers" id="VrB-0f-uiE"/>
+                        <segue destination="UUx-vt-TdJ" kind="relationship" relationship="viewControllers" id="4XT-s0-8MH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6xS-tP-qwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -266,6 +267,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="hjB-6D-T8n">
+                        <barButtonItem key="leftBarButtonItem" title="Change Picture" id="vdX-8k-n6l">
+                            <connections>
+                                <segue destination="Anp-fZ-hzb" kind="show" id="h9h-he-wQq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="he3-r5-30t">
                             <connections>
                                 <segue destination="Wzo-IP-Yna" kind="show" id="h9Y-EX-H6B"/>
@@ -285,6 +291,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lpF-sw-qyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3577" y="-1065"/>
+        </scene>
+        <!--Change Profile Picture-->
+        <scene sceneID="YDN-9W-BrF">
+            <objects>
+                <viewController id="Anp-fZ-hzb" customClass="ChangeProfileImageViewController" customModule="CKCC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AxK-Vs-YXg"/>
+                        <viewControllerLayoutGuide type="bottom" id="wZm-FP-f8U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6xa-jO-db7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_profile" translatesAutoresizingMaskIntoConstraints="NO" id="FBF-FQ-SuQ">
+                                <rect key="frame" x="67" y="72" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="I8I-xi-lry"/>
+                                    <constraint firstAttribute="width" constant="240" id="fcN-59-sgi"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="0zL-vr-QbW">
+                                <rect key="frame" x="169" y="174" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FBF-FQ-SuQ" firstAttribute="top" secondItem="AxK-Vs-YXg" secondAttribute="bottom" constant="8" symbolic="YES" id="7y9-2F-9Vd"/>
+                            <constraint firstItem="0zL-vr-QbW" firstAttribute="centerX" secondItem="FBF-FQ-SuQ" secondAttribute="centerX" id="F5d-uc-3XM"/>
+                            <constraint firstItem="FBF-FQ-SuQ" firstAttribute="centerX" secondItem="6xa-jO-db7" secondAttribute="centerX" id="GLJ-MS-Pmf"/>
+                            <constraint firstItem="0zL-vr-QbW" firstAttribute="centerY" secondItem="FBF-FQ-SuQ" secondAttribute="centerY" id="Uc0-3Q-Mit"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Change Profile Picture" id="Rhy-Xq-JSt">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Kgq-id-BK9">
+                            <connections>
+                                <action selector="onSaveButtonClick:" destination="Anp-fZ-hzb" id="9uu-c7-uUK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityInidicator" destination="0zL-vr-QbW" id="ABb-3S-0Zw"/>
+                        <outlet property="profileImageView" destination="FBF-FQ-SuQ" id="EXO-pU-JN0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oaz-HE-66k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3540" y="-1723"/>
         </scene>
         <!--Login History-->
         <scene sceneID="wpY-mw-Dgf">
@@ -755,7 +809,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgy-Ig-jb8" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="229"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="267"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_default_image" translatesAutoresizingMaskIntoConstraints="NO" id="KGv-1J-GMd">
                                                 <rect key="frame" x="20" y="20" width="334" height="160"/>
@@ -769,15 +823,25 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSs-br-FRg">
+                                                <rect key="frame" x="20" y="217" width="99" height="30"/>
+                                                <state key="normal" title="Add Comment"/>
+                                                <connections>
+                                                    <action selector="onAddCommentButtonClick:" destination="IoU-Q8-RK5" eventType="touchUpInside" id="mEw-2J-Nvi"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="zSs-br-FRg" firstAttribute="top" secondItem="e4d-Rk-rS9" secondAttribute="bottom" constant="8" symbolic="YES" id="1yW-6c-bjl"/>
+                                            <constraint firstAttribute="bottom" secondItem="zSs-br-FRg" secondAttribute="bottom" constant="20" symbolic="YES" id="3wb-Yc-cNL"/>
                                             <constraint firstItem="e4d-Rk-rS9" firstAttribute="top" secondItem="KGv-1J-GMd" secondAttribute="bottom" constant="8" symbolic="YES" id="A7E-hX-pB3"/>
                                             <constraint firstAttribute="trailing" secondItem="KGv-1J-GMd" secondAttribute="trailing" constant="20" symbolic="YES" id="MGj-Bc-Xsh"/>
                                             <constraint firstItem="KGv-1J-GMd" firstAttribute="top" secondItem="tgy-Ig-jb8" secondAttribute="top" constant="20" symbolic="YES" id="Ten-jx-v2n"/>
+                                            <constraint firstItem="zSs-br-FRg" firstAttribute="top" secondItem="e4d-Rk-rS9" secondAttribute="bottom" constant="8" symbolic="YES" id="U8A-id-08M"/>
                                             <constraint firstItem="e4d-Rk-rS9" firstAttribute="leading" secondItem="tgy-Ig-jb8" secondAttribute="leading" constant="20" symbolic="YES" id="bmG-b9-fUQ"/>
                                             <constraint firstAttribute="trailing" secondItem="e4d-Rk-rS9" secondAttribute="trailing" constant="20" symbolic="YES" id="feY-cB-ZFq"/>
-                                            <constraint firstAttribute="bottom" secondItem="e4d-Rk-rS9" secondAttribute="bottom" constant="20" symbolic="YES" id="qsP-Fx-uWB"/>
+                                            <constraint firstItem="zSs-br-FRg" firstAttribute="leading" secondItem="tgy-Ig-jb8" secondAttribute="leading" constant="20" symbolic="YES" id="v7F-TR-Rm1"/>
                                             <constraint firstItem="KGv-1J-GMd" firstAttribute="leading" secondItem="tgy-Ig-jb8" secondAttribute="leading" constant="20" symbolic="YES" id="yQu-kh-rEk"/>
                                         </constraints>
                                     </view>
@@ -1076,6 +1140,54 @@
             </objects>
             <point key="canvasLocation" x="2716" y="752.47376311844084"/>
         </scene>
+        <!--News-->
+        <scene sceneID="1rE-re-VTG">
+            <objects>
+                <tableViewController title="News" id="kMi-08-HZN" customClass="NewsFromFirebaseTableViewController" customModule="CKCC" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="w9L-bD-I84">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="kMi-08-HZN" id="VVN-8g-jnb"/>
+                            <outlet property="delegate" destination="kMi-08-HZN" id="aMT-cy-Bhj"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Firebase News" selectedImage="ic_news" id="mx7-DL-b1s"/>
+                    <navigationItem key="navigationItem" title="News from Firebase" id="aHH-IT-HnD"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="wLI-Th-xQj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                    <connections>
+                        <segue destination="IoU-Q8-RK5" kind="show" identifier="segue_article" id="rML-S8-vwk"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r0M-dD-diz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1337" y="-1800"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="9gW-GB-YhS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UUx-vt-TdJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" image="ic_news" id="2lM-QM-FCp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="h4p-rY-rqY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kMi-08-HZN" kind="relationship" relationship="rootViewController" id="cx7-Hu-WDc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMY-O7-OAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="-1800"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ic_ckcc_logo" width="1255" height="1261"/>
@@ -1084,4 +1196,7 @@
         <image name="ic_news" width="32" height="32"/>
         <image name="ic_profile" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rML-S8-vwk"/>
+    </inferredMetricsTieBreakers>
 </document>

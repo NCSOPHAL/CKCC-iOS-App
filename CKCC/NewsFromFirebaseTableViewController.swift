@@ -1,15 +1,15 @@
 //
-//  NewsTableViewController.swift
+//  NewsFromFirebaseTableViewController.swift
 //  CKCC
 //
-//  Created by Bun Leap on 4/26/17.
+//  Created by Bun Leap on 7/10/17.
 //  Copyright © 2017 CKCC. All rights reserved.
 //
 
 import UIKit
-import CoreData
+import FirebaseDatabase
 
-class NewsTableViewController: UITableViewController {
+class NewsFromFirebaseTableViewController: UITableViewController {
 
     var articles = [MyArticle]()
     
@@ -20,27 +20,29 @@ class NewsTableViewController: UITableViewController {
         let nib = UINib(nibName: "ArticleViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "article_view_cell")
         
-        // Request articles from server
-        //let url = URL(string: "http://test.js-cambodia.com/ckcc/news.json")!
-        let url = URL(string: "http://localhost/test/ckcc-api/news.json")!
-        let articlesRequest = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            let items = try! JSONSerialization.jsonObject(with: data!, options: []) as! [Any]
-            for item in items {
-                let articleItem = item as! [String:Any]
-                let id = ""//articleItem["id"] as! String
+        // Request articles from Firebase
+        let rootRef = Database.database().reference()
+        let articlesRef = rootRef.child("articles")
+        articlesRef.queryOrdered(byChild: "title").observe(.value, with: { (dataSnapshot) in
+            print("Data changed")
+            var articlesFromFirebase = [MyArticle]()
+            for subSnapshot in dataSnapshot.children.allObjects as! [DataSnapshot] {
+                let articleItem = subSnapshot.value as! [String:Any]
+                let id = subSnapshot.key
                 let title = articleItem["title"] as! String
-                let date = articleItem["date"] as! Int
+                let date = 0
                 let content = articleItem["content"] as! String
-                let thumbnailUrl = articleItem["thumbnail_url"] as! String
+                let thumbnailUrl = articleItem["thumbnailUrl"] as! String
                 
                 let articleObject = MyArticle(id: id, title: title, content: content, date: date, thumbnailUrl: thumbnailUrl)
-                self.articles.append(articleObject)
+                articlesFromFirebase.append(articleObject)
             }
+            self.articles = articlesFromFirebase
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
-        }
-        articlesRequest.resume()
+        })
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,9 +56,11 @@ class NewsTableViewController: UITableViewController {
         
         let url = URL(string: article.thumbnailUrl)!
         let imageRequest = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            let image = UIImage(data: data!)
-            DispatchQueue.main.async {
-                cell.thumbnailImageView.image = image
+            if data != nil {
+                let image = UIImage(data: data!)
+                DispatchQueue.main.async {
+                    cell.thumbnailImageView.image = image
+                }
             }
         }
         imageRequest.resume()
@@ -72,7 +76,7 @@ class NewsTableViewController: UITableViewController {
         let selectedCell = tableView.cellForRow(at: indexPath)
         performSegue(withIdentifier: "segue_article", sender: selectedCell)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get selected article
         let selectedCell = sender as! ArticleTableViewCell
@@ -82,11 +86,5 @@ class NewsTableViewController: UITableViewController {
         let articleViewController = segue.destination as! ArticleViewController
         articleViewController.article = selectedArticle
     }
-    
+
 }
-
-
-
-
-
-

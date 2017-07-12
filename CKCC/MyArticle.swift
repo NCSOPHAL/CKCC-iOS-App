@@ -10,7 +10,7 @@ import Foundation
 
 struct MyArticle {
     
-    var id: Int
+    var id: String
     var title: String
     var content: String
     var date: Int
